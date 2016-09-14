@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="37px" height="35px" viewBox="0 0 37 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>trash-o</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Bicons_v3-[Converted]" sketch:type="MSLayerGroup" transform="translate(-396.000000, -264.000000)" fill="#14171C">
+            <g id="trash-o" transform="translate(396.000000, 264.000000)" sketch:type="MSShapeGroup">
+                <path d="M31,5.5 L31,30.5 C31,32.4238576 29.4238576,34 27.5,34 L9.5,34 C7.57614237,34 6,32.4238576 6,30.5 L6,5.5 L5,5.5 L5,30.5 C5,32.9761424 7.02385763,35 9.5,35 L27.5,35 C29.9761424,35 32,32.9761424 32,30.5 L32,5.5 L31,5.5 L31,5.5 Z" id="Shape"></path>
+                <path d="M0.5,6 L36.5,6 L36.5,5 L0.5,5 L0.5,6 L0.5,6 Z" id="Shape"></path>
+                <path d="M24.5,5 L12.5,5 L13,5.5 L13,2.5 C13,1.67614237 13.6761424,1 14.5,1 L22.5,1 C23.3238576,1 24,1.67614237 24,2.5 L24,5.5 L24.5,5 L24.5,5 Z M24.5,6 L25,6 L25,5.5 L25,2.5 C25,1.12385763 23.8761424,0 22.5,0 L14.5,0 C13.1238576,0 12,1.12385763 12,2.5 L12,5.5 L12,6 L12.5,6 L24.5,6 L24.5,6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

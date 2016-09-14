@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="35px" viewBox="0 0 25 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>lamp</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Bicons_v3-[Converted]" sketch:type="MSLayerGroup" transform="translate(-402.000000, -529.000000)" fill="#14171C">
+            <g id="lamp" transform="translate(402.000000, 529.000000)" sketch:type="MSShapeGroup">
+                <path d="M16,23.8 L16,30.5 C16,32.4238576 14.4238576,34 12.5,34 C10.5761424,34 9,32.4238576 9,30.5 L9,23.8 L9,23.4420344 L8.6611319,23.326675 C4.10988916,21.7773158 1,17.4289752 1,12.5 C1,6.17614237 6.17614237,1 12.5,1 C18.8238576,1 24,6.17614237 24,12.5 C24,17.4289752 20.8901108,21.7773158 16.3388681,23.326675 L16,23.4420344 L16,23.8 L16,23.8 Z M17,23.8 L16.6611319,24.273325 C21.6178101,22.5859451 25,17.8568655 25,12.5 C25,5.62385763 19.3761424,0 12.5,0 C5.62385763,0 0,5.62385763 0,12.5 C0,17.8568655 3.38218988,22.5859451 8.3388681,24.273325 L8,23.8 L8,30.5 C8,32.9761424 10.0238576,35 12.5,35 C14.9761424,35 17,32.9761424 17,30.5 L17,23.8 L17,23.8 Z" id="Shape"></path>
+                <path d="M13,25.5 L13,18.5 L12,18.5 L12,25.5 L13,25.5 L13,25.5 Z" id="Shape"></path>
+                <path d="M8.5,27 L15.5,27 L15.5,26 L8.5,26 L8.5,27 L8.5,27 Z" id="Shape"></path>
+                <path d="M8.5,31 L15.5,31 L15.5,30 L8.5,30 L8.5,31 L8.5,31 Z" id="Shape"></path>
+                <path d="M9.14644661,15.8535534 L12.1464466,18.8535534 L12.8535534,18.1464466 L9.85355339,15.1464466 L9.14644661,15.8535534 L9.14644661,15.8535534 Z" id="Shape"></path>
+                <path d="M15.1464466,15.1464466 L12.1464466,18.1464466 L12.8535534,18.8535534 L15.8535534,15.8535534 L15.1464466,15.1464466 L15.1464466,15.1464466 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

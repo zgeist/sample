@@ -1,0 +1,80 @@
+//- extend layout file
+extends layouts/preview
+
+//- change web page title
+block title
+    | New Zollo V2
+
+//- include need page partials
+block content
+
+    .preview-container
+        header.preview-header
+            h1.preview-title
+                strong Z
+                | ollo
+            h2.preview-subtitle Welcome to the New Zollo Wordpress landing page
+
+        .preview-body
+            .row
+                .preview-item
+                    figure
+                        a(href="header-animated.html")
+                            img(src="assets/images/preview-1.jpg", alt="preview")
+
+                        .hover
+                            a.link.view(href="header-animated.html")
+                                i.fa.fa-eye
+                            a.link.buy(href="http://themeforest.net/item/zollo-v2-html-landing-page/14858236", target="_blank")
+                                i.fa.fa-shopping-cart
+
+                    .preview-item-title
+                        h3
+                            a(href="header-animated.html") Amazing motion header
+                                small ( Motion mockup included! )
+
+                .preview-item
+                    figure
+                        a(href="header-index.html")
+                            img(src="assets/images/preview-2.jpg", alt="preview")
+
+                        .hover
+                            a.link.view(href="header-index.html")
+                                i.fa.fa-eye
+                            a.link.buy(href="http://themeforest.net/item/zollo-v2-html-landing-page/14858236", target="_blank")
+                                i.fa.fa-shopping-cart
+
+                    .preview-item-title
+                        h3
+                            a(href="header-index.html") Amazing motion header
+                                small ( Full size app screenshot! )
+
+                .preview-item
+                    figure
+                        a(href="header-legacy.html")
+                            img(src="assets/images/preview-3.jpg", alt="preview")
+
+                        .hover
+                            a.link.view(href="header-legacy.html")
+                                i.fa.fa-eye
+                            a.link.buy(href="http://themeforest.net/item/zollo-v2-html-landing-page/14858236", target="_blank")
+                                i.fa.fa-shopping-cart
+
+                    .preview-item-title
+                        h3
+                            a(href="header-legacy.html") Legacy header
+                                small ( Features list include! )
+
+        .preview-footer
+            .rate-us
+                h2 don't forget rate us :)
+
+                a.rates(href="http://themeforest.net/item/zollo-v2-html-landing-page/reviews/14858236", target="_blank")
+                    i.fa.fa-star-o
+                    i.fa.fa-star-o
+                    i.fa.fa-star-o
+                    i.fa.fa-star-o
+                    i.fa.fa-star-o
+
+
+

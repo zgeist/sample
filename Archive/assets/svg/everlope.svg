@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="29px" viewBox="0 0 35 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>everlope</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Bicons_v3-[Converted]" sketch:type="MSLayerGroup" transform="translate(-67.000000, -69.000000)" fill="#14171C">
+            <g id="everlope" transform="translate(67.000000, 69.000000)" sketch:type="MSShapeGroup">
+                <path d="M30.5,28 L4.5,28 C2.57614237,28 1,26.4238576 1,24.5 L1,4.5 C1,2.57614237 2.57614237,1 4.5,1 L30.5,1 C32.4238576,1 34,2.57614237 34,4.5 L34,24.5 C34,26.4238576 32.4238576,28 30.5,28 L30.5,28 Z M30.5,29 C32.9761424,29 35,26.9761424 35,24.5 L35,4.5 C35,2.02385763 32.9761424,0 30.5,0 L4.5,0 C2.02385763,0 0,2.02385763 0,4.5 L0,24.5 C0,26.9761424 2.02385763,29 4.5,29 L30.5,29 L30.5,29 Z" id="Shape"></path>
+                <path d="M0.246489937,4.93096711 L17.2464899,14.9309671 L17.5,15.0800907 L17.7535101,14.9309671 L34.7535101,4.93096711 L34.2464899,4.06903289 L17.2464899,14.0690329 L17.7535101,14.0690329 L0.753510063,4.06903289 L0.246489937,4.93096711 L0.246489937,4.93096711 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

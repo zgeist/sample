@@ -1,0 +1,171 @@
+@import 'kouto-swiss'
+@import 'jeet'
+@import 'rupture'
+@import 'partials/vars'
+@import 'partials/mixins'
+
+body
+  background url(../images/preview-bg.jpg) center center no-repeat fixed
+  background-size cover
+
+
+.preview-container
+  center(1200px)
+  color #fff
+
+.preview-header
+  padding-top 50px
+  padding-bottom 50px
+
+.preview-title
+  font-size rem(70px)
+  color #fff
+  text-align center
+  font-weight 800
+  margin 0
+
+  strong
+    color primary-color
+
+.preview-subtitle
+  font-size rem(47px)
+  font-weight 200
+  text-align center
+  margin 0
+
+
+.preview-body
+  .row
+    cf()
+    position relative
+
+    &:before
+      content ""
+      border-top 1px solid rgba(navbar-bd-color, 0.1)
+      border-bottom 1px solid rgba(navbar-bd-color, 0.1)
+      background rgba(#fff, .01)
+      display block
+      position absolute
+      top 85px
+      left 0
+      right 0
+      bottom 0
+      margin auto -50%
+      z-index -1
+      opacity 1
+      box-shadow(0 0 40px 20px rgba(#000, .4))
+      transition(all .5s ease-out)
+
+      +below(tablet-cutoff)
+        display none
+
+  .preview-item
+    col(1/3)
+
+    +below(tablet-cutoff)
+      stack()
+
+    img
+      max-width 100%
+
+
+  .preview-item-title
+    font-size rem(27px)
+    font-weight 800
+    text-align center
+    transition(all .2s ease-out)
+
+    a
+      color #fff
+      text-decoration none
+
+      &:hover
+        color primary-color
+    small
+      display block
+      font-size rem(19px)
+      font-weight 200
+
+
+  figure
+    position relative
+    overflow hidden
+    border 1px solid #303a44
+    box-shadow(0 0 106px rgba(#000, .53))
+    margin 0 auto
+    max-width 370px
+    display block
+
+    .hover
+      absolute(0, 0, 0, 0)
+      background-color rgba(#000, .3)
+      opacity 0
+      visibility hidden
+      transition(all .3s ease-out)
+      text-align center
+      padding-top 170px
+
+      +below(tablet-cutoff)
+        display none
+
+      .link
+        display block
+        font-size rem(25px)
+        width 72px
+        height 72px
+        line-height 72px
+        border-radius 50%
+        border 1px solid rgba(#fff, .46)
+        text-align center
+        opacity .7
+        margin auto
+        absolute(0, 0, 0, 0)
+        transform scale(0, 0)
+        box-shadow(0 0 27px rgba(#000, .7))
+
+        &.view
+          left -100px
+
+        &.buy
+          right -100px
+
+        &:hover
+          opacity 1
+          border-color primary-color
+          color primary-color
+
+    &:hover
+      img
+        gaussian-blur(9px)
+
+      .hover
+        opacity 1
+        visibility visible
+
+        .link
+          transform scale(1, 1)
+
+      + .preview-item-title
+        transform translateY(-15px)
+
+.preview-footer
+  text-align center
+  padding-bottom 100px
+  padding-top 50px
+
+  .rate-us
+    h2
+      font-size rem(35px)
+      font-weight 200
+      color #fff
+      text-transform uppercase
+
+    .rates
+      font-size rem(30px)
+
+      &:hover
+        color primary-color
+
+      .fa
+        margin 0 4px
+        display inline-block

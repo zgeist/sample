@@ -1,0 +1,13 @@
+//- extend layout file
+extends layouts/blog
+
+//- change web page title
+block title
+    | Post Zollo V2
+
+//- include need page partials
+block content
+    include partials/nav
+    include partials/blog-header
+    include includes/single
+    include partials/blog-footer

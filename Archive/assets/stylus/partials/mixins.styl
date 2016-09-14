@@ -1,0 +1,75 @@
+gaussian-blur(value)
+  filter blur(value)
+  -moz-filter blur(value)
+  -webkit-filter blur(value)
+  -o-filter blur(value)
+
+box-sizing(box = border-box)
+  box-sizing box
+  -moz-box-sizing box
+  -webkit-box-sizing box
+
+box-shadow(shadow)
+  box-shadow shadow
+  -moz-box-shadow shadow
+  -webkit-box-shadow shadow
+
+transition(trans)
+  transition trans
+  -moz-transition trans
+  -webkit-transition trans
+
+transition-delay(delay)
+  transition-delay delay
+  -moz-transition-delay delay
+  -webkit-transition-delay delay
+
+zl-translate(x = 0, y = 0)
+  transform translate(x, y)
+  -moz-transform translate(x, y)
+  -webkit-transform translate(x, y)
+
+zl-rotate(deg = 0deg)
+  transform rotate(deg)
+  -moz-transform rotate(deg)
+  -webkit-transform rotate(deg)
+
+zl-scale(x, y)
+  transform scale(x, y)
+  -moz-transform scale(x, y)
+  -webkit-transform scale(x, y)
+
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
+clearfix()
+  &:after, &:before
+    content ""
+    display table
+    clear both
+
+form-var(color, f-color = primary-color)
+  border-color color
+  color color
+
+  +placeholder()
+    color: color
+
+  &:focus
+    border-color f-color
+
+btn-var(name, bg, color = #fff)
+  &.{name}
+    background-color bg
+    color color
+
+    &:hover
+      background-color darken(bg, 10%)
+      color color

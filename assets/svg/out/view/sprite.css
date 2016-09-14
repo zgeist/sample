@@ -1,0 +1,693 @@
+.svg-alarm {
+	background: url("svg/sprite.view.svg") 0 52.43055555555556% no-repeat;
+}
+
+.svg-alarm-dims {
+	width: 35px;
+	height: 36px;
+}
+
+.svg-atom {
+	background: url("svg/sprite.view.svg") 52.38095238095238% 36.933797909407666% no-repeat;
+}
+
+.svg-atom-dims {
+	width: 33px;
+	height: 37px;
+}
+
+.svg-balance {
+	background: url("svg/sprite.view.svg") 0 14.878892733564014% no-repeat;
+}
+
+.svg-balance-dims {
+	width: 39px;
+	height: 35px;
+}
+
+.svg-book {
+	background: url("svg/sprite.view.svg") 76.02739726027397% 36.206896551724135% no-repeat;
+}
+
+.svg-book-dims {
+	width: 35px;
+	height: 34px;
+}
+
+.svg-bug {
+	background: url("svg/sprite.view.svg") 23.28767123287671% 76.55172413793103% no-repeat;
+}
+
+.svg-bug-dims {
+	width: 35px;
+	height: 34px;
+}
+
+.svg-calendar {
+	background: url("svg/sprite.view.svg") 36.76975945017182% 39.721254355400696% no-repeat;
+}
+
+.svg-calendar-dims {
+	width: 36px;
+	height: 37px;
+}
+
+.svg-camera {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 35.11705685618729% no-repeat;
+}
+
+.svg-camera-dims {
+	width: 35px;
+	height: 25px;
+}
+
+.svg-case {
+	background: url("svg/sprite.view.svg") 35.273972602739725% 76.28865979381443% no-repeat;
+}
+
+.svg-case-dims {
+	width: 35px;
+	height: 33px;
+}
+
+.svg-center-align {
+	background: url("svg/sprite.view.svg") 24.489795918367346% 63.822525597269625% no-repeat;
+}
+
+.svg-center-align-dims {
+	width: 33px;
+	height: 31px;
+}
+
+.svg-circle-minus {
+	background: url("svg/sprite.view.svg") 64.38356164383562% 88.92733564013841% no-repeat;
+}
+
+.svg-circle-minus-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-circle-no {
+	background: url("svg/sprite.view.svg") 76.36986301369863% 88.92733564013841% no-repeat;
+}
+
+.svg-circle-no-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-circle-ok {
+	background: url("svg/sprite.view.svg") 100% 0 no-repeat;
+}
+
+.svg-circle-ok-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-circle-plus {
+	background: url("svg/sprite.view.svg") 100% 33.56401384083045% no-repeat;
+}
+
+.svg-circle-plus-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-cloud {
+	background: url("svg/sprite.view.svg") 14.982578397212544% 0 no-repeat;
+}
+
+.svg-cloud-dims {
+	width: 40px;
+	height: 30px;
+}
+
+.svg-collapse {
+	background: url("svg/sprite.view.svg") 99.31972789115646% 66.32302405498282% no-repeat;
+}
+
+.svg-collapse-dims {
+	width: 33px;
+	height: 33px;
+}
+
+.svg-comments {
+	background: url("svg/sprite.view.svg") 0 27.083333333333332% no-repeat;
+}
+
+.svg-comments-dims {
+	width: 38px;
+	height: 36px;
+}
+
+.svg-compass {
+	background: url("svg/sprite.view.svg") 76.02739726027397% 0 no-repeat;
+}
+
+.svg-compass-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-crop {
+	background: url("svg/sprite.view.svg") 0 39.721254355400696% no-repeat;
+}
+
+.svg-crop-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-desktop {
+	background: url("svg/sprite.view.svg") 25.862068965517242% 26.896551724137932% no-repeat;
+}
+
+.svg-desktop-dims {
+	width: 37px;
+	height: 34px;
+}
+
+.svg-dot {
+	background: url("svg/sprite.view.svg") 23.28767123287671% 88.92733564013841% no-repeat;
+}
+
+.svg-dot-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-edit {
+	background: url("svg/sprite.view.svg") 40.3448275862069% 0 no-repeat;
+}
+
+.svg-edit-dims {
+	width: 37px;
+	height: 38px;
+}
+
+.svg-eject {
+	background: url("svg/sprite.view.svg") 99.31972789115646% 45.51724137931034% no-repeat;
+}
+
+.svg-eject-dims {
+	width: 33px;
+	height: 34px;
+}
+
+.svg-everlope {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 63.728813559322035% no-repeat;
+}
+
+.svg-everlope-dims {
+	width: 35px;
+	height: 29px;
+}
+
+.svg-exit {
+	background: url("svg/sprite.view.svg") 53.10344827586207% 0 no-repeat;
+}
+
+.svg-exit-dims {
+	width: 37px;
+	height: 36px;
+}
+
+.svg-expand {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 52.94117647058823% no-repeat;
+}
+
+.svg-expand-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-eye {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 43.18936877076412% no-repeat;
+}
+
+.svg-eye-dims {
+	width: 35px;
+	height: 23px;
+}
+
+.svg-file {
+	background: url("svg/sprite.view.svg") 64.52702702702703% 12.5% no-repeat;
+}
+
+.svg-file-dims {
+	width: 31px;
+	height: 36px;
+}
+
+.svg-file-r {
+	background: url("svg/sprite.view.svg") 64.52702702702703% 24.913494809688583% no-repeat;
+}
+
+.svg-file-r-dims {
+	width: 31px;
+	height: 35px;
+}
+
+.svg-files {
+	background: url("svg/sprite.view.svg") 75.51020408163265% 24.22145328719723% no-repeat;
+}
+
+.svg-files-dims {
+	width: 33px;
+	height: 35px;
+}
+
+.svg-film {
+	background: url("svg/sprite.view.svg") 35.714285714285715% 63.822525597269625% no-repeat;
+}
+
+.svg-film-dims {
+	width: 33px;
+	height: 31px;
+}
+
+.svg-filter {
+	background: url("svg/sprite.view.svg") 34.56375838926174% 88.92733564013841% no-repeat;
+}
+
+.svg-filter-dims {
+	width: 29px;
+	height: 35px;
+}
+
+.svg-gear {
+	background: url("svg/sprite.view.svg") 24.137931034482758% 39.721254355400696% no-repeat;
+}
+
+.svg-gear-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-glass {
+	background: url("svg/sprite.view.svg") 99.31972789115646% 77.66323024054982% no-repeat;
+}
+
+.svg-glass-dims {
+	width: 33px;
+	height: 33px;
+}
+
+.svg-globe {
+	background: url("svg/sprite.view.svg") 76.02739726027397% 48.09688581314879% no-repeat;
+}
+
+.svg-globe-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-half {
+	background: url("svg/sprite.view.svg") 76.02739726027397% 60.207612456747405% no-repeat;
+}
+
+.svg-half-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-half-o {
+	background: url("svg/sprite.view.svg") 0 76.8166089965398% no-repeat;
+}
+
+.svg-half-o-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-image {
+	background: url("svg/sprite.view.svg") 46.93877551020408% 76.28865979381443% no-repeat;
+}
+
+.svg-image-dims {
+	width: 33px;
+	height: 33px;
+}
+
+.svg-justify {
+	background: url("svg/sprite.view.svg") 58.16326530612245% 75.7679180887372% no-repeat;
+}
+
+.svg-justify-dims {
+	width: 33px;
+	height: 31px;
+}
+
+.svg-lamp {
+	background: url("svg/sprite.view.svg") 73.50993377483444% 12.110726643598616% no-repeat;
+}
+
+.svg-lamp-dims {
+	width: 25px;
+	height: 35px;
+}
+
+.svg-leaf {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 0 no-repeat;
+}
+
+.svg-leaf-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-left-align {
+	background: url("svg/sprite.view.svg") 58.16326530612245% 63.822525597269625% no-repeat;
+}
+
+.svg-left-align-dims {
+	width: 33px;
+	height: 31px;
+}
+
+.svg-lifebuoy {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 24.22145328719723% no-repeat;
+}
+
+.svg-lifebuoy-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-link {
+	background: url("svg/sprite.view.svg") 68.91891891891892% 75.7679180887372% no-repeat;
+}
+
+.svg-link-dims {
+	width: 31px;
+	height: 31px;
+}
+
+.svg-lock {
+	background: url("svg/sprite.view.svg") 39.261744966442954% 13.286713286713287% no-repeat;
+}
+
+.svg-lock-dims {
+	width: 29px;
+	height: 38px;
+}
+
+.svg-map {
+	background: url("svg/sprite.view.svg") 53.10344827586207% 12.543554006968641% no-repeat;
+}
+
+.svg-map-dims {
+	width: 37px;
+	height: 37px;
+}
+
+.svg-map-marker {
+	background: url("svg/sprite.view.svg") 23.972602739726028% 52.43055555555556% no-repeat;
+}
+
+.svg-map-marker-dims {
+	width: 35px;
+	height: 36px;
+}
+
+.svg-marker {
+	background: url("svg/sprite.view.svg") 86.24161073825503% 75.08650519031141% no-repeat;
+}
+
+.svg-marker-dims {
+	width: 29px;
+	height: 35px;
+}
+
+.svg-music {
+	background: url("svg/sprite.view.svg") 0 100% no-repeat;
+}
+
+.svg-music-dims {
+	width: 24px;
+	height: 32px;
+}
+
+.svg-music-double {
+	background: url("svg/sprite.view.svg") 0 88.92733564013841% no-repeat;
+}
+
+.svg-music-double-dims {
+	width: 33px;
+	height: 35px;
+}
+
+.svg-news {
+	background: url("svg/sprite.view.svg") 13.494809688581315% 14.878892733564014% no-repeat;
+}
+
+.svg-news-dims {
+	width: 38px;
+	height: 35px;
+}
+
+.svg-nut {
+	background: url("svg/sprite.view.svg") 12.585034013605442% 39.721254355400696% no-repeat;
+}
+
+.svg-nut-dims {
+	width: 33px;
+	height: 37px;
+}
+
+.svg-off {
+	background: url("svg/sprite.view.svg") 64.52702702702703% 37.0242214532872% no-repeat;
+}
+
+.svg-off-dims {
+	width: 31px;
+	height: 35px;
+}
+
+.svg-pencil {
+	background: url("svg/sprite.view.svg") 87.16216216216216% 88.01369863013699% no-repeat;
+}
+
+.svg-pencil-dims {
+	width: 31px;
+	height: 32px;
+}
+
+.svg-pencil-adv {
+	background: url("svg/sprite.view.svg") 28.32764505119454% 0 no-repeat;
+}
+
+.svg-pencil-adv-dims {
+	width: 34px;
+	height: 38px;
+}
+
+.svg-person {
+	background: url("svg/sprite.view.svg") 45.205479452054796% 88.92733564013841% no-repeat;
+}
+
+.svg-person-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-phone {
+	background: url("svg/sprite.view.svg") 54.57516339869281% 88.92733564013841% no-repeat;
+}
+
+.svg-phone-dims {
+	width: 21px;
+	height: 35px;
+}
+
+.svg-photo {
+	background: url("svg/sprite.view.svg") 53.10344827586207% 25.085910652920962% no-repeat;
+}
+
+.svg-photo-dims {
+	width: 37px;
+	height: 33px;
+}
+
+.svg-right-align {
+	background: url("svg/sprite.view.svg") 46.93877551020408% 63.822525597269625% no-repeat;
+}
+
+.svg-right-align-dims {
+	width: 33px;
+	height: 31px;
+}
+
+.svg-rule {
+	background: url("svg/sprite.view.svg") 76.02739726027397% 67.20257234726688% no-repeat;
+}
+
+.svg-rule-dims {
+	width: 35px;
+	height: 13px;
+}
+
+.svg-settings {
+	background: url("svg/sprite.view.svg") 99.31972789115646% 55.89225589225589% no-repeat;
+}
+
+.svg-settings-dims {
+	width: 33px;
+	height: 27px;
+}
+
+.svg-share {
+	background: url("svg/sprite.view.svg") 100% 12.110726643598616% no-repeat;
+}
+
+.svg-share-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-speed {
+	background: url("svg/sprite.view.svg") 100% 23.569023569023567% no-repeat;
+}
+
+.svg-speed-dims {
+	width: 35px;
+	height: 27px;
+}
+
+.svg-stopwatch {
+	background: url("svg/sprite.view.svg") 64.52702702702703% 0 no-repeat;
+}
+
+.svg-stopwatch-dims {
+	width: 31px;
+	height: 36px;
+}
+
+.svg-table {
+	background: url("svg/sprite.view.svg") 48.10996563573883% 52.43055555555556% no-repeat;
+}
+
+.svg-table-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-table-no {
+	background: url("svg/sprite.view.svg") 35.95890410958904% 52.43055555555556% no-repeat;
+}
+
+.svg-table-no-dims {
+	width: 35px;
+	height: 36px;
+}
+
+.svg-table-ok {
+	background: url("svg/sprite.view.svg") 11.986301369863014% 52.43055555555556% no-repeat;
+}
+
+.svg-table-ok-dims {
+	width: 35px;
+	height: 36px;
+}
+
+.svg-tablet {
+	background: url("svg/sprite.view.svg") 63.666666666666664% 49.134948096885815% no-repeat;
+}
+
+.svg-tablet-dims {
+	width: 27px;
+	height: 35px;
+}
+
+.svg-tag {
+	background: url("svg/sprite.view.svg") 99.31972789115646% 87.79661016949153% no-repeat;
+}
+
+.svg-tag-dims {
+	width: 33px;
+	height: 29px;
+}
+
+.svg-target {
+	background: url("svg/sprite.view.svg") 0 0 no-repeat;
+}
+
+.svg-target-dims {
+	width: 43px;
+	height: 43px;
+}
+
+.svg-text {
+	background: url("svg/sprite.view.svg") 11.301369863013699% 88.92733564013841% no-repeat;
+}
+
+.svg-text-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-trash {
+	background: url("svg/sprite.view.svg") 13.10344827586207% 26.98961937716263% no-repeat;
+}
+
+.svg-trash-dims {
+	width: 37px;
+	height: 35px;
+}
+
+.svg-trash-o {
+	background: url("svg/sprite.view.svg") 40.3448275862069% 26.29757785467128% no-repeat;
+}
+
+.svg-trash-o-dims {
+	width: 37px;
+	height: 35px;
+}
+
+.svg-triggers {
+	background: url("svg/sprite.view.svg") 88.01369863013699% 12.110726643598616% no-repeat;
+}
+
+.svg-triggers-dims {
+	width: 35px;
+	height: 35px;
+}
+
+.svg-unlock {
+	background: url("svg/sprite.view.svg") 27.85234899328859% 13.286713286713287% no-repeat;
+}
+
+.svg-unlock-dims {
+	width: 29px;
+	height: 38px;
+}
+
+.svg-volume-max {
+	background: url("svg/sprite.view.svg") 11.904761904761905% 76.8166089965398% no-repeat;
+}
+
+.svg-volume-max-dims {
+	width: 33px;
+	height: 35px;
+}
+
+.svg-volume-min {
+	background: url("svg/sprite.view.svg") 0 64.70588235294117% no-repeat;
+}
+
+.svg-volume-min-dims {
+	width: 36px;
+	height: 35px;
+}
+
+.svg-warning {
+	background: url("svg/sprite.view.svg") 12.371134020618557% 63.822525597269625% no-repeat;
+}
+
+.svg-warning-dims {
+	width: 36px;
+	height: 31px;
+}
+

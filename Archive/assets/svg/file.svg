@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="36px" viewBox="0 0 31 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>file</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Bicons_v3-[Converted]" sketch:type="MSLayerGroup" transform="translate(-399.000000, -329.000000)" fill="#14171C">
+            <g id="file" transform="translate(399.000000, 329.000000)" sketch:type="MSShapeGroup">
+                <path d="M26.5,35 L4.5,35 C2.57614237,35 1,33.4238576 1,31.5 L1,4.5 C1,2.57614237 2.57614237,1 4.5,1 L16.7,1 C17.0644327,1 17.4619271,1.14644529 17.8,1.4 L29.5607307,12.2672824 C29.8510831,12.5581899 30,12.9304821 30,13.4 L30,31.5 C30,33.4238576 28.4238576,35 26.5,35 L26.5,35 Z M26.5,36 C28.9761424,36 31,33.9761424 31,31.5 L31,13.4 C31,12.6695179 30.7489169,12.0418101 30.2535534,11.5464466 L18.4392693,0.632717632 C17.8966936,0.222520225 17.2927102,0 16.7,0 L4.5,0 C2.02385763,0 0,2.02385763 0,4.5 L0,31.5 C0,33.9761424 2.02385763,36 4.5,36 L26.5,36 L26.5,36 Z" id="Shape"></path>
+                <path d="M17,0.5 L17,8.5 C17,10.9761424 19.0238576,13 21.5,13 L30,13 L30,12 L21.5,12 C19.5761424,12 18,10.4238576 18,8.5 L18,0.5 L17,0.5 L17,0.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

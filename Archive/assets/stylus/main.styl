@@ -1,0 +1,2132 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	    Zollo V2 Landing page
+Version:	    2.00
+Last change:	7/02/16
+Author:	        Fatonix team
+Primary use:	Marketing sites, Applications
+
+[Layout]
+
+* body
+    + Require modules
+      - 'kouto-swiss'
+      - 'jeet'
+      - 'rupture'
+      - 'partials/vars'
+      - 'partials/mixins'
+
+    + Include partials (/includes)
+      - Forms (forms.styl)
+      - Buttons (buttons.styl)
+      - Posts (posts.styl)
+      - Widgets (widgets.styl)
+      - Sections (sections.styl)
+
+    + List of components
+      - 1. Normalize
+      - 2. Logo properties
+      - 3. Navigation
+      - 4. Search bar
+      - 5. Header
+      - 6. Section
+      - 7. Spins
+      - 8. Slick slider
+      - 9. Screenshot slider
+      - 10. Noteslider
+      - 11. Carousel slider
+      - 12. Features slider
+      - 13. Featured
+      - 14. Phone muckup
+      - 15. Marked list
+      - 16. Embed video
+      - 17. Pricing tables
+      - 18. Subscribe form properties
+      - 19. Contact form
+      - 20. Post grid
+      - 21. Footer logo properties
+      - 22. Copyright
+      - 23. Socials list
+      - 24. Download buttons
+      - 25. Share buttons
+      - 26. Buttons up
+
+Global wrapper - .site-wrapper
+Navigation - .nav
+Content header - h1.section-title
+Section gray background - .section.bg-variant
+Marked list - ul.marked
+
+[Define style properties]
+
+
+ks-rem-base = 15px // Base font size
+base-font-family = "Raleway" // base font family
+
+main-color = #7f7e7e // Main color of website
+dark-color = #191919 // Dark gray color
+primary-color = #37bbf9 // Actice buttons, links color
+light-gray = #f6f6f6 // Light gray color
+lighten-gray = #f9f9f9 // Lighten gray color
+lighten-gray-2 = #eeeeee // Lighten gray color second variant
+
+section-title-color = #444444 // Color for section title
+
+container = 1200px // Site width
+gutter = 15px // Container padding
+
+navbar-height = 83px // Navbar height property
+navbar-bd-color = #fff // Overlay color for navbar
+navbar-text-color = #a6a6a6 // Navbar text color
+
+tag-color = #c6c6c6 // Tag text color
+
+comment-bg-color = #e9e9e9 // Comment background
+
+// Responsive breakpoints
+
+rupture.mobile-cutoff = mobile-cutoff = 460px
+rupture.tablet-cutoff = tablet-cutoff = 768px
+rupture.desktop-cutoff = desktop-cutoff = 1200px
+laptop-cutoff = 1440px
+
+-------------------------------------------------------------------*/
+
+@import 'kouto-swiss'
+@import 'jeet'
+@import 'rupture'
+@import 'partials/vars'
+@import 'partials/mixins'
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,100,500,400,600,700,800)
+@import '../svg/out/view/sprite.css'
+@import '../fonts/icomoon/style.css'
+
+@import 'includes/forms'
+@import 'includes/buttons'
+@import 'includes/posts'
+@import 'includes/widgets'
+
+
+/* 1. Normalize begin */
+
+ks-normalize()
+
+/* uncomment if you want show grid */
+//edit()
+
+.main-wrapper
+  overflow hidden
+  transition(all 700ms 400ms ease-out)
+
+.preloader
+  .main-wrapper
+    opacity 0
+
+html
+  font-size ks-rem-base
+
+body, html
+  height 100%
+
+body
+  position relative
+  font-family font-stack(base-font-family)
+  font-weight 400
+  color main-color
+
+  &.no-scroll
+    overflow hidden
+
+*
+  box-sizing(border-box)
+
+a
+  color inherit
+  transition(all 250ms ease-out)
+
+p
+  font-size rem(15px)
+  line-height rem(24px)
+  transition(all 250ms ease-out)
+
+  +mobile()
+    font-size rem(13px)
+    line-height rem(20px)
+
+img
+  vertical-align top
+  transition(all 250ms ease-out)
+
+.clearfix
+  clearfix()
+
+// Untiles
+
+.text-center
+  text-align center
+
+
+.container
+  center(container, gutter)
+  position relative
+
+  +tablet()
+    width 100%
+
+/* Normalize end */
+
+/* 2. Logo properties begin */
+
+.logo
+  span(1/5)
+  a
+    text-decoration none
+    font-size rem(40px)
+    font-weight 800
+    height navbar-height
+    line-height navbar-height
+    display block
+
+    +below(tablet-cutoff)
+      color dark-color
+
+    span
+      color primary-color
+
+  .overlay &
+    a
+      color dark-color
+
+/* Logo properties end */
+
+/* 3. Navigation begin */
+
+.navigation
+  position fixed
+  top 0
+  left 0
+  width 100%
+  z-index 1000
+  color #fff
+  height navbar-height
+  border-bottom 3px double rgba(navbar-bd-color, 0.2)
+  transition(all 300ms ease-out)
+
+  +below(tablet-cutoff)
+    background-color #fff
+
+  .mobile-menu-btn
+    display none
+    width rem(30px)
+    height rem(23px)
+    float right
+    background none
+    color #fff
+    border none
+    position relative
+    padding 0
+    margin-top 30px
+    outline none
+
+    +below(tablet-cutoff)
+      display block
+
+    span
+      display block
+      height 3px
+      background dark-color
+      position absolute
+      width rem(30px)
+
+      &:nth-child(1)
+        top 0
+      &:nth-child(2)
+        top 10px
+      &:nth-child(3)
+        top 20px
+
+    &.active
+      zl-rotate(180deg)
+      span
+        &:nth-child(1)
+          zl-rotate(90deg)
+          top 9px
+        &:nth-child(2)
+          zl-rotate(-45deg)
+          width 15px
+          top 18px
+          left 13px
+        &:nth-child(3)
+          zl-rotate(45deg)
+          width 15px
+          top 18px
+          left 2px
+
+  &.overlay
+    background-color #fff
+    border-bottom-color lighten-gray-2
+
+    &:after
+      border-bottom-color lighten-gray-2
+
+  .sub-menu
+    position absolute
+    top 100%
+    right  0
+    padding 0
+    margin 0
+    text-align left
+    list-style none
+    min-width 250px
+    visibility hidden
+    transition(all 250ms ease-out)
+
+    +below(tablet-cutoff)
+      position relative
+      top 0
+      visibility hidden
+      max-height 0
+      overflow hidden
+      text-align center
+      border-top 1px solid main-color
+
+    > li
+      background-color #fff
+      transition(all 250ms ease-out)
+      zl-translate(y: 40px)
+      opacity 0
+      visibility hidden
+      box-shadow( 0 3px 0px rgba(#000, .1) )
+
+      for num in (1..15)
+        &:nth-child({num})
+          transition-delay(100ms*num)
+
+      > a
+        font-size rem(15px)
+        text-decoration none
+        color dark-color
+        display block
+        padding rem(17px) rem(23px)
+
+      &:hover
+        > a
+          background-color lighten-gray
+
+      &:last-child
+        border-radius 0 0 3px 3px
+
+
+  .navbar
+    span(4/5)
+    text-align right
+
+    a
+      white-space nowrap
+
+    ul
+      padding 0
+      margin 0
+      list-style none
+      display inline-block
+
+    +below(tablet-cutoff)
+      visibility hidden
+      position absolute
+      left 0
+      top navbar-height
+      overflow auto
+      width 100%
+      text-align center
+
+      ul
+        display block
+
+    > ul > li
+      display inline-block
+      font-weight 500
+      position relative
+      padding 0 rem(16px)
+      box-sizing()
+
+      +below(tablet-cutoff)
+        display block
+        background-color #fff
+        transition(all 250ms ease-out)
+        zl-translate(y: 40px)
+        opacity 0
+        visibility hidden
+
+        for num in (1..15)
+          &:nth-child({num})
+            transition-delay(100ms*num)
+
+      > a
+        text-decoration none
+        display block
+        line-height navbar-height
+        height navbar-height
+        position relative
+        color navbar-text-color
+
+        &:before, &:after
+          content ""
+          position absolute
+          bottom 0
+          left 0
+          width 100%
+          border-bottom 1px solid #fff
+          zl-translate(y: -20px)
+          transition(all 250ms ease-out)
+          opacity 0
+
+        &:after
+          bottom 2px
+          transition(all 250ms 150ms ease-out)
+
+      &:first-child
+        padding-left 0
+        +below(tablet-cutoff)
+          padding-left rem(16px)
+
+      &:last-child
+        padding-right 0
+        +below(tablet-cutoff)
+          padding-right rem(16px)
+
+      &.has-sub-menu
+        position relative
+        padding-right rem(16px)
+
+        &:after
+          content ""
+          position absolute
+          top 0
+          right 0
+          bottom 0
+          border-top 3px solid #fff
+          border-left 3px solid transparent
+          border-right 3px solid transparent
+          width 0
+          height 0
+          margin auto
+
+          +below(tablet-cutoff)
+            right 20px
+            bottom auto
+            top (navbar-height/2)
+
+        &.active
+          +below(tablet-cutoff)
+            .sub-menu
+              max-height 1000px
+              visibility visible
+
+      &.active
+        +below(tablet-cutoff)
+          > a
+            color #fff
+
+            +below(tablet-cutoff)
+              color dark-color
+
+            &:before, &:after
+              zl-translate(y: 0)
+              opacity 1
+
+          > .sub-menu
+            visibility visible
+
+            li
+              zl-translate(y: 0)
+              opacity 1
+              visibility visible
+              box-shadow( 0 3px 5px rgba(#000, .1) )
+
+      &:hover
+        > a
+          color #fff
+
+          +below(tablet-cutoff)
+            color dark-color
+
+          &:before, &:after
+            zl-translate(y: 0)
+            opacity 1
+
+        > .sub-menu
+          visibility visible
+
+          li
+            zl-translate(y: 0)
+            opacity 1
+            visibility visible
+            box-shadow( 0 3px 5px rgba(#000, .1) )
+
+    &.open
+      background-color #fff
+      visibility visible
+      ul > li
+        +below(tablet-cutoff)
+          zl-translate(y: 0)
+          opacity 1
+          visibility visible
+
+  &.overlay
+    .navbar
+      li
+        > a
+          &:before, &:after
+            border-color dark-color
+
+        &.has-sub-menu
+          &:after
+            border-top-color dark-color
+
+        &:hover, &.active
+          > a
+            color dark-color
+
+/* Navigation end */
+
+/* 4. Search bar begin */
+
+.search-bar
+  float right
+
+  *
+    transition(all 300ms ease-out)
+
+  +below(tablet-cutoff)
+    display none
+
+  .search-btn
+    background none
+    border none
+    line-height navbar-height
+    height navbar-height
+    padding 0 rem(16px)
+    color navbar-text-color
+    outline none
+
+    &:hover
+      color #fff
+
+      .overlay &
+        color dark-color
+
+  .search-form
+    position absolute
+    top 20px
+    right 15px
+    width 0
+
+    input
+      width 100%
+      background none
+      border 1px solid rgba(#fff, .1)
+      border-radius 3px
+      height 42px
+      line-height 42px
+      outline none
+      padding 0
+      box-sizing()
+      visibility hidden
+      opacity 0
+
+      .overlay &
+        border-color navbar-text-color
+        color dark-color
+
+        &:focus
+          border-color dark-color
+
+      &:focus
+        border-color #fff
+
+.search-bar-on
+  .search-form
+    span(4/5)
+
+    input
+      padding 0 10px
+      visibility visible
+      opacity 1
+
+  > ul
+    opacity 0
+    visibility hidden
+
+/* Searchbar end */
+
+/* 5. Header begin */
+
+// Background animation kayframes
+
+@keyframes bg-move
+  0%
+    transform translate(-50%, -50%) scale(1, 1)
+  25%
+    transform translate(-51%, -51%) scale(1.05, 1.05)
+  50%
+    transform translate(-49%, -49%) scale(1.1, 1.1)
+  75%
+    transform translate(-51%, -51%) scale(1.05, 1.05)
+  100%
+    transform translate(-50%, -50%) scale(1, 1)
+
+.header
+  padding-top rem(navbar-height)
+  position relative
+  background-color #0f1a24
+  color #fff
+  overflow hidden
+
+  .back-to-home
+    float right
+    color #fff
+    font-size rem(16px)
+    font-weight 400
+    text-decoration none
+
+    &:hover
+      color primary-color
+
+  +mobile()
+    padding-bottom rem(15px)
+
+  .blog &
+    min-height 0
+    padding-bottom 0
+
+    .page-type
+      font-size rem(30px)
+      line-height rem(78px)
+      text-align center
+      max-width rem(970px)
+      margin-left auto
+      margin-right auto
+
+  &:before
+    content ""
+    background url(header-bg) top center / cover no-repeat;
+    align(both)
+    width 100%
+    height 100%
+    opacity .4
+    gaussian-blur(13px)
+
+  &.header-variant-2
+    background-color #080d11
+
+    &:before
+      background-image url(header-bg-2)
+
+  &.animated-bg
+    &:before
+      animation(bg-move 20s ease-out infinite)
+
+  &:after
+    content: ""
+    background-image repeating-linear-gradient( top left, rgba(#000, .27), rgba(#000, .27) 1px, transparent 1px, transparent 100% );
+    background-size 6px 6px
+    background-repeat repeat
+    align(both)
+    width 100%
+    height 100%
+
+  .container
+    z-index 1
+    clearfix()
+
+  .header-line
+    position relative
+    margin 50px 0
+    cf()
+    &:before
+      content ""
+      border-top 1px solid rgba(navbar-bd-color, 0.1)
+      border-bottom 1px solid rgba(navbar-bd-color, 0.1)
+      background rgba(#fff, .01)
+      display block
+      position absolute
+      top 60px
+      left 0
+      right 0
+      bottom 60px
+      margin auto -50%
+      z-index -1
+      opacity 1
+      box-shadow(0 0 40px 20px rgba(#000, .4))
+      transition(all .5s ease-out)
+
+      +below(tablet-cutoff)
+        display none
+
+    .muckup
+      col(4/9)
+
+      +below(tablet-cutoff)
+        stack()
+        max-width 500px
+
+      img
+        max-width 100%
+
+
+
+    .header-text
+      col(5/9)
+      margin 60px 0 120px
+
+      +below(tablet-cutoff)
+        stack()
+        margin 0
+        text-align center
+
+    .website-heading
+      text-align left
+
+      +below(tablet-cutoff)
+        text-align center
+
+      strong
+        color primary-color
+
+.website-heading
+  font-size rem(44px)
+  font-weight 100
+  text-align: center
+  margin-top rem(64px)
+  margin-bottom rem(15px)
+
+  +mobile()
+    font-size rem(22px)
+    margin-top rem(20px)
+
+  strong
+    font-weight 600
+
+.header-features
+  min-height 370px
+  position relative
+  margin rem(160px) 0 rem(130px)
+
+  +below(tablet-cutoff)
+    margin rem(15px) 0
+
+  &:before
+    content ""
+    height 0
+    border-top 3px double rgba(navbar-bd-color, 0.2)
+    border-bottom 3px double rgba(navbar-bd-color, 0.2)
+    background rgba(#000, .2)
+    display block
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    margin auto -50%
+    z-index -1
+    opacity 0
+    transition(all .5s ease-out)
+
+    +below(tablet-cutoff)
+      display none
+
+  .phone-muckup
+    align(both)
+    background url(../images/phone-muckup-3.png) top left no-repeat
+    padding rem(66px) rem(21px) rem(69px)
+    display inline-block
+    overflow hidden
+    vertical-align top
+    background-size 100% auto
+    opacity 0
+    transition(all .3s .5s ease-out)
+
+    img
+      max-width 100%
+
+    +below(tablet-cutoff)
+      position relative
+      top 0
+      left 0
+      transform translate(0, 0)
+      background none
+      padding 0
+      display block
+      text-align center
+
+      img
+        display inline-block
+
+  .features-columns
+    col(1/2, cirle: 2, gutter: 33.33)
+    text-align center
+    opacity 0
+    transition(all .5s .8s ease-out)
+
+    +below(desktop-cutoff)
+      col(1/2, cirle: 2, gutter: 36)
+      text-align center
+
+    +below(tablet-cutoff)
+      stack()
+
+    &.left
+      transform translateX(-50%)
+
+    &.right
+      transform translateX(50%)
+
+    h2
+      font-size rem(28px)
+      line-height rem(36px)
+      font-weight 500
+      margin-bottom rem(30px)
+      margin-top rem(70px)
+      text-transform uppercase
+
+      +below(desktop-cutoff)
+        font-size rem(22px)
+        line-height rem(28px)
+
+      +below(tablet-cutoff)
+        margin-top rem(15px)
+        margin-bottom rem(15px)
+        font-size rem(18px)
+        line-height rem(24px)
+
+  &.show-up
+    &:before
+      height 370px
+      opacity 1
+
+    .phone-muckup
+      opacity 1
+
+    .features-columns
+      opacity 1
+      &.left
+        transform translateX(0)
+
+      &.right
+        transform translateX(0)
+
+
+.header-features-list
+
+  .phone-muckup
+    background url(../images/phone-muckup-1.png) top left no-repeat
+    padding rem(74px) rem(22px) 0
+    display inline-block
+    overflow hidden
+    vertical-align top
+    background-size 100% auto
+    max-width 100%
+
+    img
+      max-width 100%
+
+    +mobile()
+      background none
+      padding 0
+
+  +above(tablet-cutoff)
+    margin-top rem(64px)
+
+  .features-columns
+    col(1/3, 0, 0, 0, .5)
+
+    +below(tablet-cutoff)
+      stack()
+
+    &.text-
+      &left
+        text-align left
+      &center
+        text-align center
+      &right
+        text-align right
+
+  h4
+    font-weight 500
+    color primary-color
+    font-size rem(20px)
+    line-height rem(24px)
+    margin 0 0 rem(7px) 0
+
+  p
+    margin 0
+
+  .features-list
+    list-style none
+    padding rem(52px) 0 0 0
+    margin 0
+
+    +below(desktop-cutoff)
+      padding rem(20px) 0 0 0
+    +below(tablet-cutoff)
+      display none
+
+    li
+      padding-bottom rem(45px)
+      position relative
+
+      +below(desktop-cutoff)
+        padding-bottom rem(25px)
+
+      &:before
+        content ""
+        width rem(28px)
+        border-bottom 1px solid #fff
+        position absolute
+        top 16px
+
+      &:after
+        content ""
+        position absolute
+        top 10px
+        border 1px solid #fff
+        border-radius 50%
+        width 11px
+        height 11px
+
+      +below(desktop-cutoff)
+        &:before, &:after
+          display none
+
+  .text-right .features-list
+    padding-right rem(55px)
+
+    +below(desktop-cutoff)
+      padding-right rem(20px)
+
+    li
+      &:before
+        right -44px
+
+      &:after
+        right -60px
+
+  .text-left .features-list
+    padding-left rem(55px)
+
+    +below(desktop-cutoff)
+      padding-left rem(20px)
+
+    li
+      &:before
+        left -44px
+
+      &:after
+        left -60px
+
+
+/* Header end */
+
+/* 6. Section begin */
+
+@import "includes/sections"
+
+/* Section end */
+
+/* 7. Spins begin */
+
+.spins
+  margin-top rem(-70px)
+  .spin
+    col(1/3, cycle: 3, uncycle: 3, gutter: 10)
+    padding rem(70px) 0 0 0
+
+    +tablet()
+      col(1/2, cycle: 2, uncycle: 3)
+
+    +mobile()
+      stack()
+      text-align center
+      padding rem(10px) 0
+
+    h4
+      line-height rem(38px)
+      font-size rem(20px)
+      font-weight 500
+      margin 0 0 rem(10px)
+      span
+        display inline-block
+        vertical-align middle
+        margin-right rem(22px)
+        font-size rem(37px)
+        color primary-color
+
+        +mobile()
+          display block
+          margin auto
+
+        svg path
+          fill: red
+
+    p
+      margin 0
+
+/* Spins end */
+
+/* 8. Slick slider properties */
+
+.slick-slider
+
+  .slick-slide
+    outline none
+    img
+      margin auto
+
+  .slick-dots
+    margin-top 53px
+    text-align center
+
+    +mobile()
+      margin-top 20px
+
+    li
+      display inline-block
+      padding 0 2px
+      button
+        text-indent -9999px
+        padding 0
+        background none
+        border 1px solid main-color
+        width 10px
+        height 10px
+        display block
+        border-radius 50%
+        position relative
+        outline none
+
+        &:after
+          content ""
+          position absolute
+          align(both)
+          width 0
+          height 0
+          border 1px solid main-color
+          border-radius 50%
+          transition(all 300ms ease-out)
+          display block
+          opacity 0
+
+      &:hover
+        button
+          border-color primary-color
+
+      &.slick-active
+        button
+          border-color primary-color
+
+          &:after
+            opacity 1
+            width 4px
+            height 4px
+            border-color primary-color
+
+/* Slickslider end */
+
+/* 9. Screenshot slider begin */
+
+.screenshot-carousel
+  .slick-slide
+    img
+      max-width 100%
+
+/* Screenshot slider end */
+
+/* 10. Noteslider begin */
+
+.note-slider
+  position relative
+  padding-bottom rem(20px)
+
+  .note-slider-control
+    text-align center
+    font-size rem(20px)
+    text-transform uppercase
+    font-weight 100
+    vertical-align middle
+    padding-bottom rem(40px)
+
+    > span
+      padding 0 rem(34px)
+      margin-left rem(3px)
+      min-width rem(220px)
+      display inline-block
+
+
+    span, button
+      vertical-align middle
+      line-height rem(36px)
+
+    button
+      background none
+      border none
+      padding 0
+      outline none
+
+    [class*="ion-"]
+      font-size rem(26px)
+      display inline-block
+      vertical-align middle
+
+/* Noteslider end */
+
+/* 11. Carousel slider begin */
+
+.carousel
+  padding 79px 24px 0 23px
+  max-width 343px
+  margin auto
+
+  +mobile()
+    padding 0
+
+  .slide
+    outline none
+
+  &:after
+    content ""
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    border-bottom 2px solid #fff
+    margin 0 -55px
+
+  &:before
+    content ""
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background url(../images/phone-muckup-2.png) top center no-repeat
+
+  +mobile()
+    &:before, &:after
+      display none
+
+  .slick-list
+    max-width 296px
+    margin auto
+    position relative
+    background-color #fff
+
+    .slick-slide
+      outline none
+      //margin 0 24px
+      .slide-inner
+        position relative
+
+        img
+          max-width 100%
+          display block
+
+        .note
+          position absolute
+          left -100px
+          top 0
+
+/* Carousel slider end */
+
+/* 12. Features slider begin */
+
+.features-carousel
+  position absolute
+  top 81px
+  left 0
+  bottom 0
+  width 100%
+  z-index 10
+
+  .slick-list, .slick-track, .slide, .notes
+    height 100%
+
+  +below(tablet-cutoff)
+    display none
+
+  .notes
+    max-width 343px
+    margin auto
+    position relative
+    padding-top 80px
+
+    .note
+      outline none
+      position relative
+      z-index 10
+      margin-bottom 60px
+      height 20%
+
+      + .right
+        margin-top -130px
+
+      h4
+        position relative
+        font-size rem(25px)
+        font-weight 500
+        margin 0 0 rem(5px)
+
+      p
+        font-size rem(15px)
+        line-height rem(20px)
+        margin 0
+        font-weight 100
+
+
+      &.left
+        zl-translate(-100%, 0)
+        text-align right
+        padding-right 120px
+
+        +below(desktop-cutoff)
+          padding-right 40px
+
+      &.right
+        zl-translate(100%, 0)
+        text-align left
+        padding-left 120px
+
+        +below(desktop-cutoff)
+          padding-left 40px
+
+        + .left
+          margin-top -40px
+
+      .line
+        position absolute
+        top 16px
+        right 0
+        margin-right -35px
+        height 1px
+        background-image: linear-gradient(90deg, #fff, primary-color)
+        width 115px
+
+        +below(desktop-cutoff)
+          width 50px
+
+        .circle
+          width 13px
+          height 13px
+          border 1px solid primary-color
+          border-radius 50%
+          display block
+          margin-right -16px
+          position absolute
+          top -6px
+          right 0
+          z-index 1
+
+          &:before
+            content ""
+            width 5px
+            height 5px
+            border 1px solid primary-color
+            border-radius 50%
+            display block
+            margin auto
+            position absolute
+            top 0
+            right 0
+            bottom 0
+            left 0
+
+          &:first-child
+            right auto
+            left 0
+            margin-right 0
+            margin-left -16px
+            border-color #fff
+
+            &:before
+              border-color #fff
+
+      &.right
+        .line
+          right auto
+          left 0
+          background-image: linear-gradient(270deg, #fff, primary-color)
+          margin-right 0
+          margin-left -35px
+
+          .circle
+            border-color #fff
+            &:before
+              border-color #fff
+
+            &:first-child
+              border-color primary-color
+
+              &:before
+                border-color primary-color
+
+/* Features slider end */
+
+/* 13. Featured begin */
+
+.featured-image
+  col(1/3)
+
+  +desktop()
+    col(2/5)
+
+  +below(tablet-cutoff)
+    stack()
+    max-width rem(mobile-cutoff)
+
+  .white-phone-muckup
+    position relative
+
+    +mobile()
+      box-shadow(0 0 3px rgba(#000, .3))
+
+    &:last-child
+      margin-left 80px
+
+      +mobile()
+        margin-left 0
+
+.fetures-text
+  col(2/3)
+
+  +desktop()
+    col(3/5)
+
+  +below(tablet-cutoff)
+    stack()
+    max-width rem(mobile-cutoff)
+    margin-top rem(30px)
+
+  .section-title
+    text-align left
+
+    + p
+      text-align left
+      max-width 100%
+
+    &:after
+      margin-left 0
+      margin-right 0
+
+  .half
+    col(1/2, cycle: 2)
+
+    +below(tablet-cutoff)
+      stack()
+
+/* Featured end */
+
+/* 14. Phone muckup begin */
+
+.white-phone-muckup
+  background url(../images/phone-muckup-white.png) top center no-repeat
+  width 282px
+  height 542px
+  padding 67px 22px 67px 21px
+  float right
+
+  +mobile()
+    padding 0
+    background none
+    text-align center
+    width auto
+    height auto
+    margin-bottom 20px
+
+  &.small
+    zl-scale(490/542, 490/542)
+    position absolute
+
+/* Phone muckup end */
+
+/* 15. Marked list end */
+
+ul.marked
+  color dark-color
+  li
+    padding-left 25px
+    position relative
+    line-height 37px
+    text-transform uppercase
+
+    +mobile()
+      font-size rem(12px)
+
+    &:before
+      content ""
+      position absolute
+      top 0
+      left 0
+      display block
+      width 14px
+      height 37px
+      background url(../images/list-marker.png) center center no-repeat
+
+/* Marked list end */
+
+/* 16. Embed video begin */
+
+.embed-video
+  position relative
+  display block
+  height 0
+  padding 0
+  overflow hidden
+  padding-bottom 56.25%
+  max-width 960px
+  margin auto
+
+  .embed-item, iframe, embed, object, video
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    height 100%
+    width 100%
+    border 0
+
+/* Embed video end */
+
+/* 17. Pricing tables begin */
+
+.pricing-table-group
+  .pricing-table
+    col(1/3, cycle: 3)
+    background-color #fff
+    border-radius 3px
+    padding 0 40px
+    text-align center
+
+    +between(tablet-cutoff, desktop-cutoff)
+      col(1/3, gutter: 1)
+      padding 0 15px
+      text-align center
+
+    +below(tablet-cutoff)
+      stack()
+      padding 0 10px
+      margin-bottom 20px
+      max-width rem(370px)
+
+      &:last-child
+        margin-bottom 0
+        float none
+
+    .item-header
+      border-bottom 1px solid rgba(#000, .1)
+
+      h2
+        font-size rem(32px)
+        font-weight 200
+        margin 50px 0 25px 0
+
+        +mobile()
+          font-size rem(24px)
+          margin 20px 0
+
+      h3
+        font-size rem(26px)
+        font-weight 200
+        margin 0 0 30px 0
+
+        +mobile()
+          font-size rem(20px)
+          margin 0 0 15px 0
+
+    .item-body
+      font-size rem(17px)
+      font-weight 100
+      padding 25px 0 0 0
+
+      +mobile()
+        padding-top 15px
+
+      strong, b
+        font-weight 700
+
+      ul
+        li
+          line-height 64px
+
+    .item-footer
+      padding 20px 0 50px 0
+
+      +mobile()
+        padding 15px 0
+
+      .btn
+        display inline-block
+        font-size rem(20px)
+        line-height rem(24px)
+        padding em(18px)
+        color #fff
+        background-color primary-color
+        border-radius 3px
+        max-width 240px
+        width 100%
+        font-weight 700
+        text-decoration none
+        height auto
+        transition(all 300ms ease-out)
+
+        &:hover
+          background-color darken(primary-color, 10%)
+
+        +mobile()
+          padding em(9px)
+
+    &.premium
+      background-color primary-color
+      color #fff
+
+      .item-header
+        border-bottom-color rgba(#fff, .2)
+
+      .item-footer
+        .btn
+          color primary-color
+          background-color #fff
+          box-shadow(0 0 0 1px #fff inset)
+
+          &:hover
+            background-color rgba(#fff, .4)
+            color #fff
+
+/* Pricing tables end */
+
+/* 17. Testimonials carousel begin */
+
+.testimonials-carousel
+  .slide
+    text-align center
+
+    .text
+      font-size rem(25px)
+      line-height rem(32px)
+      font-weight 500
+      padding-bottom rem(40px)
+
+      +mobile()
+        font-size rem(17px)
+        line-height rem(26px)
+        padding-bottom rem(20px)
+
+    .author
+      img
+        border-radius 50%
+
+    .picture
+      margin 0
+      img
+        display inline-block
+        vertical-align middle
+      figcaption
+        font-size rem(15px)
+        text-align left
+        display inline-block
+        vertical-align middle
+        font-weight 100
+        margin-left 11px
+
+        small
+          font-size rem(9px)
+          text-transform uppercase
+
+/* Testimonials carousel end */
+
+/* 18. Subscribe form properties begin */
+
+.subscribe
+  max-width rem(750px)
+  margin auto
+  .btn
+    min-width rem(215px);
+
+/* Subscribe form properties end */
+
+/* 19. Contact form begin */
+
+.contact-form
+  border-bottom 1px solid rgba(#fff, 0.2)
+  position relative
+  max-width 970px
+  ks-clearfix()
+  margin  0 auto rem(60px)
+  padding 0 0 rem(64px)
+
+  +mobile()
+    padding 0 0 rem(25px)
+
+  &:before
+    content ""
+    position absolute
+    bottom -3px
+    left 0
+    right 0
+    border-bottom 1px solid rgba(#fff, .2)
+    display block
+
+  .form-textarea
+    height 126px
+    resize vertical
+
+/* Contact form end */
+
+/* 20. Post grid begin */
+
+.post-grid
+  clearfix()
+
+  .post-item
+    col(1/3, cycle: 3)
+    background-color #fff
+
+    +between(tablet-cutoff, desktop-cutoff)
+      col(1/3, gutter: 1)
+
+    +below(tablet-cutoff)
+      stack()
+      margin-bottom rem(20px)
+      max-width rem(370px)
+
+      &:last-child
+        margin-bottom 0
+        float none
+
+    a
+      color primary-color
+      text-decoration none
+
+      &:hover
+        color darken(primary-color, 20%)
+
+      &.read-more
+        &:after
+          content "\f101"
+          font-family FontAwesome
+          font-size rem(10px)
+          margin-left 5px
+
+    figure
+      margin 0
+
+    .post-thumbnail
+      img
+        border-radius 3px 3px 0 0
+        max-width 100%
+
+      a
+        display block
+
+    .post-thumbnail-no
+      background-color darken(light-gray, 5%)
+      border-radius 3px 3px 0 0
+      padding-bottom (271/370 * 100%)
+      color #fff
+      text-align center
+      position relative
+
+      a
+        display block
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+
+      &:before
+        content "\f03e"
+        font-family FontAwesome
+        font-size rem(120px)
+        align(both)
+        display block
+        height rem(110px)
+        line-height rem(110px)
+
+    .post-meta
+      display table
+
+      .meta-item
+        display table-cell
+        padding 0 10px
+        width 1%
+        white-space nowrap
+
+        +below(desktop-cutoff)
+          padding 0 5px
+
+        &:first-child
+          padding-left 0
+        &:last-child
+          padding-right 0
+          text-align right
+
+    .post-body
+      padding rem(20px) rem(30px)
+
+      h4
+        font-size rem(20px)
+        color dark-color
+        font-weight 500
+        margin rem(10px) 0
+
+        a
+          color inherit
+
+          &:hover
+            color primary-color
+
+      p
+        margin 0 0 rem(10px)
+
+    .post-footer
+      border-top 1px solid #e8e8e8
+      position relative
+      margin 0 rem(30px)
+      padding rem(20px) 0
+      font-size rem(15px)
+
+      +below(desktop-cutoff)
+        font-size rem(11px)
+        margin 0
+        padding rem(10px)
+
+      .fa
+        font-size rem(14px)
+
+      &:before
+        content ""
+        border-top 1px solid #e8e8e8
+        position absolute
+        left 0
+        top -3px
+        width 100%
+        display block
+
+/* Post grid end */
+
+/* 21. Footer logo properties begin */
+
+.footer-logo
+  font-size rem(35px)
+  font-weight 700
+  text-decoration none
+
+  a
+    text-decoration none
+
+  span
+    color primary-color
+
+/* Footer logo properties end */
+
+/* 22. Copyright begin */
+
+.copyright
+  text-align center
+
+  +mobile()
+    margin-top rem(20px)
+
+  p
+    font-size rem(15px)
+    margin-bottom rem(30px)
+
+    +mobile()
+      font-size rem(13px)
+      margin-bottom rem(30px)
+
+/* Copyright end */
+
+/* 23. Socials list properties */
+
+.socials
+  li
+    display inline-block
+    padding 0 rem(16px)
+
+    +mobile()
+      padding 0 rem(10px)
+
+    a
+      text-decoration none
+
+      &:hover
+        color primary-color
+
+/* Socials list properties end */
+
+/* 24. Download buttons begin */
+
+.download-btns
+  margin-top 37px
+
+  +below(desktop-cutoff)
+    margin-top 25px
+    margin-bottom 25px
+
+  +below(tablet-cutoff)
+    margin-top 15px
+    margin-bottom 15px
+    text-align center
+
+  .btn-app-store, .btn-play-store
+    display inline-block
+    width 181px
+    height 51px
+    position relative
+    margin 0 7px
+
+    +below(tablet-cutoff)
+      margin 0 3px
+
+
+    &:first-child
+      +above(tablet-cutoff)
+        margin-left 0
+
+    &:last-child
+      +above(tablet-cutoff)
+        margin-right 0
+
+    &:before, &:after
+      content ""
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      transition(all 300ms ease-out)
+      z-index -1
+
+  .btn-app-store
+    &:before
+      background url(../images/markets-btns.png) 0 0 / 362px 153px no-repeat
+      +retina()
+        background url(../images/markets-btns-retina.png) 0 0 / 362px 153px no-repeat
+
+    &:after
+      background url(../images/markets-btns.png) 0 -102px / 362px 153px no-repeat
+      +retina()
+        background url(../images/markets-btns-retina.png) 0 -102px / 362px 153px no-repeat
+      opacity 0
+
+    &:hover
+      &:before
+        background url(../images/markets-btns.png) 0 0 / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) 0 0 / 362px 153px no-repeat
+        opacity 0
+
+      &:after
+        background url(../images/markets-btns.png) 0 -102px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) 0 -102px / 362px 153px no-repeat
+        opacity 1
+
+
+  .btn-play-store
+    &:before
+      background url(../images/markets-btns.png) -181px 0 / 362px 153px no-repeat
+      +retina()
+        background url(../images/markets-btns-retina.png) -181px 0 / 362px 153px no-repeat
+
+    &:after
+      background url(../images/markets-btns.png) -181px -102px / 362px 153px no-repeat
+      +retina()
+        background url(../images/markets-btns-retina.png) -181px -102px / 362px 153px no-repeat
+      opacity 0
+
+    &:hover
+      &:before
+        background url(../images/markets-btns.png) -181px 0 / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) -181px 0 / 362px 153px no-repeat
+        opacity 0
+
+      &:after
+        background url(../images/markets-btns.png) -181px -102px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) -181px -102px / 362px 153px no-repeat
+        opacity 1
+
+  &.white
+    .btn-app-store
+      &:before
+        background url(../images/markets-btns.png) 0 -51px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) 0 -51px / 362px 153px no-repeat
+
+      &:after
+        background url(../images/markets-btns.png) 0 -102px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) 0 -102px / 362px 153px no-repeat
+        opacity 0
+
+      &:hover
+        &:before
+          background url(../images/markets-btns.png) 0 -51px / 362px 153px no-repeat
+          +retina()
+            background url(../images/markets-btns-retina.png) 0 -51px / 362px 153px no-repeat
+          opacity 0
+
+        &:after
+          background url(../images/markets-btns.png) 0 -102px / 362px 153px no-repeat
+          +retina()
+            background url(../images/markets-btns-retina.png) 0 -102px / 362px 153px no-repeat
+          opacity 1
+
+
+    .btn-play-store
+      &:before
+        background url(../images/markets-btns.png) -181px -51px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) -181px -51px / 362px 153px no-repeat
+
+      &:after
+        background url(../images/markets-btns.png) -181px -102px / 362px 153px no-repeat
+        +retina()
+          background url(../images/markets-btns-retina.png) -181px -102px / 362px 153px no-repeat
+        opacity 0
+
+      &:hover
+        &:before
+          background url(../images/markets-btns.png) -181px -51px / 362px 153px no-repeat
+          +retina()
+            background url(../images/markets-btns-retina.png) -181px -51px / 362px 153px no-repeat
+          opacity 0
+
+        &:after
+          background url(../images/markets-btns.png) -181px -102px / 362px 153px no-repeat
+          +retina()
+            background url(../images/markets-btns-retina.png) -181px -102px / 362px 153px no-repeat
+          opacity 1
+
+/* Download buttons end */
+
+/* 25. Share buttons begin */
+
+ul.share-buttons
+  list-style none
+  padding 0
+
+  li
+    display inline-block
+
+/* Share buttons end */
+
+/* 26. Buttons up begin */
+
+.btn-up
+  position fixed
+  right 30px
+  bottom 30px
+  display block
+  width 65px
+  height 65px
+  border 1px solid primary-color
+  border-radius 5px
+  z-index 100
+  background rgba(#fff, .06)
+  zl-translate(0, 100px)
+  opacity 0
+  visibility hidden
+  outline none
+  transition(all 250ms ease-out)
+
+  &.show
+    visibility visible
+    opacity 1
+    zl-translate(0, 0)
+
+  &:after
+    content "go up"
+    position absolute
+    left 0
+    bottom -15px
+    color primary-color
+    font-size rem(14px)
+    text-align center
+    display block
+    width 100%
+    opacity 0
+    visibility hidden
+    transition(all 300ms ease-out)
+
+  span
+    width 20px
+    height 2px
+    background primary-color
+    display block
+    position absolute
+    left 50%
+    top 50%
+    margin-top -5px
+    transition(all 250ms ease-out)
+
+    &:nth-child(1)
+      zl-rotate(45deg)
+      margin-left -3px
+
+    &:nth-child(2)
+      zl-rotate(-45deg)
+      margin-left -17px
+
+  &:hover
+    &:after
+      bottom 5px
+      opacity 1
+      visibility visible
+
+    span
+      margin-top -15px
+
+/* Buttons up end */
+
+/* 27. Alertify */
+.alertify
+  top 0
+  background primary-color
+  color #fff
+
+  .alertify-button
+    display inline-block
+    line-height rem(30px)
+    height rem(30px)
+    border none
+    padding 0 rem(20px)
+    border-radius 3px
+    box-sizing(border-box)
+    box-shadow(0 0 0 1px #fff inset)
+    text-decoration none
+    transition(all 300ms ease-out)
+    outline none
+    background #fff
+    color primary-color
+
+    &:hover
+      background rgba(#fff, .4)
+      color #fff
+
+
+  &.error
+    background red-color
+
+    .alertify-button
+       color red-color
+
+       &:hover
+         color #fff
+
+/* Alertify end */
+
+/* 28. Loader */
+
+.loader
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background #fff
+  z-index 1000
+  transition(all 400ms ease-out)
+
+  &.hide
+    visibility hidden
+    opacity 0
+
+  .cssload-whirlpool,
+  .cssload-whirlpool::before,
+  .cssload-whirlpool::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgb(204,204,204);
+    border-left-color: primary-color;
+    border-radius: 974px;
+    -o-border-radius: 974px;
+    -ms-border-radius: 974px;
+    -webkit-border-radius: 974px;
+    -moz-border-radius: 974px;
+  }
+
+  .cssload-whirlpool {
+    margin: -37px 0 0 -37px;
+    height: 74px;
+    width: 74px;
+    animation: cssload-rotate 1150ms linear infinite;
+    -o-animation: cssload-rotate 1150ms linear infinite;
+    -ms-animation: cssload-rotate 1150ms linear infinite;
+    -webkit-animation: cssload-rotate 1150ms linear infinite;
+    -moz-animation: cssload-rotate 1150ms linear infinite;
+  }
+
+  .cssload-whirlpool::before {
+    content: "";
+    margin: -32px 0 0 -32px;
+    height: 60px;
+    width: 60px;
+    animation: cssload-rotate 1150ms linear infinite;
+    -o-animation: cssload-rotate 1150ms linear infinite;
+    -ms-animation: cssload-rotate 1150ms linear infinite;
+    -webkit-animation: cssload-rotate 1150ms linear infinite;
+    -moz-animation: cssload-rotate 1150ms linear infinite;
+  }
+
+  .cssload-whirlpool::after {
+    content: "";
+    margin: -42px 0 0 -42px;
+    height: 80px;
+    width: 80px;
+    animation: cssload-rotate 2300ms linear infinite;
+    -o-animation: cssload-rotate 2300ms linear infinite;
+    -ms-animation: cssload-rotate 2300ms linear infinite;
+    -webkit-animation: cssload-rotate 2300ms linear infinite;
+    -moz-animation: cssload-rotate 2300ms linear infinite;
+  }
+
+  @keyframes cssload-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes cssload-rotate {
+    100% {
+      -o-transform: rotate(360deg);
+    }
+  }
+
+  @-ms-keyframes cssload-rotate {
+    100% {
+      -ms-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes cssload-rotate {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes cssload-rotate {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+
+
+
+/* Loader end */
